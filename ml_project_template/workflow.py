@@ -30,7 +30,7 @@ save_notebooks_to = cwd / "results" / "notebooks"
 
 # make sure changes are updated to module
 # (this will do nothing if you run the workflow from inside a notebook)
-os.system("nbdev_build_lib")
+#os.system("nbdev_build_lib")
 
 # run workflow
 for notebook in ["00_data.ipynb", "01_model.ipynb", "02_loss.ipynb"]:
@@ -40,5 +40,5 @@ for notebook in ["00_data.ipynb", "01_model.ipynb", "02_loss.ipynb"]:
         / ("_" + notebook),  # this is where the executed notebook will be saved
         # (notebooks named with '_' -prefix are ignored by nbdev build_lib & build_docs!)
         parameters={"seed": 1},  # you can change notebook parameters
-        kernel_name="python38myenv",
+        #kernel_name="python38myenv",
     )  # note: change kernel according to your project setup!
